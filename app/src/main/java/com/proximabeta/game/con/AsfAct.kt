@@ -87,12 +87,16 @@ class AsfAct : AppCompatActivity() {
 
     private fun intLONE() {
         val intent = Intent(this@AsfAct, LOneAct::class.java)
+        Hawk.put(geo, null)
+        Hawk.put(countryCode, null)
         startActivity(intent)
         finish()
     }
 
     private fun intWE() {
         val intent = Intent(this@AsfAct, WIS::class.java)
+        Hawk.put(geo, null)
+        Hawk.put(countryCode, null)
         startActivity(intent)
         finish()
     }

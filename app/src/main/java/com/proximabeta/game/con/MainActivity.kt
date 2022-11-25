@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                 countCo = Hawk.get(countryCode)
                 ge = Hawk.get(geo)
             }
-
         }, 0, 1, TimeUnit.SECONDS)
 
         GlobalScope.launch (Dispatchers.IO){

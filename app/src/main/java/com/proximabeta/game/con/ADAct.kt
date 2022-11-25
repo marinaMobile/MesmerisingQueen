@@ -34,6 +34,7 @@ class ADAct : AppCompatActivity() {
 
         if (check == "0") {
             intALone()
+
         } else {
             GlobalScope.launch(Dispatchers.Default) {
                 getAdId()
@@ -52,6 +53,8 @@ class ADAct : AppCompatActivity() {
 
     private fun intALone() {
         val intent = Intent(this@ADAct, LOneAct::class.java)
+        Hawk.put(ThatClass.geo, null)
+        Hawk.put(ThatClass.countryCode, null)
         startActivity(intent)
         finish()
     }
