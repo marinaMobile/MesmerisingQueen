@@ -1,9 +1,11 @@
 package com.proximabeta.game.con
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.facebook.applinks.AppLinkData
 import com.orhanobut.hawk.Hawk
 import com.proximabeta.game.con.ThatClass.Companion.countryCode
 import com.proximabeta.game.con.ThatClass.Companion.geo
@@ -24,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindMainAct = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindMainAct.root)
+
+        deePP(this)
 
         val executorService = Executors.newSingleThreadScheduledExecutor()
         var countCo: String? = Hawk.get(countryCode, null)
@@ -91,5 +95,18 @@ class MainActivity : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_NO_ANIMATION
         startActivity(intent)
         finish()
+    }
+
+    fun deePP(context: Context) {
+        AppLinkData.fetchDeferredAppLinkData(
+            context
+        ) { appLinkData: AppLinkData? ->
+            appLinkData?.let {
+                val params = appLinkData.targetUri.host.toString()
+                Hawk.put(ThatClass.DEEPL, params)
+            }
+            if (appLinkData == null) {
+            }
+        }
     }
 }

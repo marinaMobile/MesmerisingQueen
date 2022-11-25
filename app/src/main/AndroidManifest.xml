@@ -21,7 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MesmerisingQueen"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:targetApi="32">
         <activity
             android:name=".loop.CupActivity"
             android:exported="false" />
@@ -30,7 +30,9 @@
             android:exported="false" />
         <activity
             android:name=".WIS"
-            android:exported="false" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ADAct"
             android:exported="false" />
@@ -39,11 +41,11 @@
             android:exported="false" />
         <activity
             android:name=".AsfAct"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleInstance"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:launchMode="singleInstance">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

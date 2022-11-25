@@ -1,13 +1,11 @@
 package com.proximabeta.game.con
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
-import com.facebook.applinks.AppLinkData
 import com.orhanobut.hawk.Hawk
 import com.proximabeta.game.con.ThatClass.Companion.C1
 import com.proximabeta.game.con.ThatClass.Companion.DEEPL
@@ -28,12 +26,16 @@ class AsfAct : AppCompatActivity() {
         bindAsf = ActivityAsfBinding.inflate(layoutInflater)
         setContentView(bindAsf.root)
 
-        deePP(this)
+        val appsCh: String? = Hawk.get(appsCheck, "null")
 
-        AppsFlyerLib.getInstance()
-            .init("5toWCoSKehEz7Y4pibaiM7", conversionDataListener, applicationContext)
-        AppsFlyerLib.getInstance().start(this)
+        if (appsCh == "1") {
+            AppsFlyerLib.getInstance()
+                .init("5toWCoSKehEz7Y4pibaiM7", conversionDataListener, applicationContext)
+            AppsFlyerLib.getInstance().start(this)
+        }
+
         folk()
+
     }
 
     private val conversionDataListener = object : AppsFlyerConversionListener {
@@ -46,18 +48,7 @@ class AsfAct : AppCompatActivity() {
         override fun onAttributionFailure(p0: String?) {}
     }
 
-    fun deePP(context: Context) {
-        AppLinkData.fetchDeferredAppLinkData(
-            context
-        ) { appLinkData: AppLinkData? ->
-            appLinkData?.let {
-                val params = appLinkData.targetUri.host.toString()
-                Hawk.put(DEEPL, params)
-            }
-            if (appLinkData == null) {
-            }
-        }
-    }
+
    private fun folk() {
 
        val countriesPool: String = Hawk.get(geo)

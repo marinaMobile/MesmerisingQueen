@@ -33,6 +33,7 @@ class ADAct : AppCompatActivity() {
         val check = getShData()
 
         if (check == "0") {
+
             intALone()
         } else {
             GlobalScope.launch(Dispatchers.Default) {

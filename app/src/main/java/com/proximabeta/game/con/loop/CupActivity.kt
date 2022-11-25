@@ -82,7 +82,7 @@ class CupActivity : AppCompatActivity() {
                 planeThree.setBackgroundResource(R.color.blue)
                 planeFour.setBackgroundResource(R.color.blue)
                 planeFive.setBackgroundResource(R.color.blue)
-            }, 3000)
+            }, 4000)
         }
 
         cvPlaneTwo.setOnClickListener{
@@ -103,7 +103,7 @@ class CupActivity : AppCompatActivity() {
                 planeThree.setBackgroundResource(R.color.blue)
                 planeFour.setBackgroundResource(R.color.blue)
                 planeFive.setBackgroundResource(R.color.blue)
-            }, 3000)
+            }, 4000)
         }
 
         cvPlaneThree.setOnClickListener{
@@ -124,7 +124,7 @@ class CupActivity : AppCompatActivity() {
                 planeThree.setBackgroundResource(R.color.blue)
                 planeFour.setBackgroundResource(R.color.blue)
                 planeFive.setBackgroundResource(R.color.blue)
-            }, 3000)
+            }, 4000)
         }
 
         cvPlaneFour.setOnClickListener{
@@ -144,7 +144,7 @@ class CupActivity : AppCompatActivity() {
                 planeThree.setBackgroundResource(R.color.blue)
                 planeFour.setBackgroundResource(R.color.blue)
                 planeFive.setBackgroundResource(R.color.blue)
-            }, 3000)
+            }, 4000)
         }
 
         cvPlaneFive.setOnClickListener{
@@ -164,7 +164,7 @@ class CupActivity : AppCompatActivity() {
                 planeThree.setBackgroundResource(R.color.blue)
                 planeFour.setBackgroundResource(R.color.blue)
                 planeFive.setBackgroundResource(R.color.blue)
-            }, 3000)
+            }, 4000)
         }
 
         cvPlaneSix.setOnClickListener{
@@ -184,7 +184,7 @@ class CupActivity : AppCompatActivity() {
                 planeThree.setBackgroundResource(R.color.blue)
                 planeFour.setBackgroundResource(R.color.blue)
                 planeFive.setBackgroundResource(R.color.blue)
-            }, 3000)
+            }, 4000)
         }
     }
 
