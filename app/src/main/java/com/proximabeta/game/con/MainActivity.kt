@@ -91,8 +91,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun intMain() {
         val intent = Intent(this@MainActivity, ADAct::class.java)
-        overridePendingTransition(0, 0)
-        intent.flags = Intent.FLAG_ACTIVITY_NO_ANIMATION
         startActivity(intent)
         finish()
     }

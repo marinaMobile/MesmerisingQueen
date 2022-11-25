@@ -33,7 +33,6 @@ class ADAct : AppCompatActivity() {
         val check = getShData()
 
         if (check == "0") {
-
             intALone()
         } else {
             GlobalScope.launch(Dispatchers.Default) {
@@ -53,16 +52,12 @@ class ADAct : AppCompatActivity() {
 
     private fun intALone() {
         val intent = Intent(this@ADAct, LOneAct::class.java)
-        overridePendingTransition(0, 0)
-        intent.flags = Intent.FLAG_ACTIVITY_NO_ANIMATION
         startActivity(intent)
         finish()
     }
 
     private fun intAfb() {
         val intent = Intent(this@ADAct, AsfAct::class.java)
-        overridePendingTransition(0, 0)
-        intent.flags = Intent.FLAG_ACTIVITY_NO_ANIMATION
         startActivity(intent)
         finish()
     }
